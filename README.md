@@ -7,6 +7,3 @@ Using this info, the program can make an API request to 'emtaweather' to get a c
 and the next.
 
 Arkkan El-Khatib
-Carleton University
-Bachelor of Computer Science
-2nd Year
