@@ -48,17 +48,24 @@ def getCurrentLatLong():
 
 def main():
     cur_location = getCurrentLatLong()
+    print('##########################################')
+    print('Current Latitude: {:2.02f}'.format(cur_location[0]))
+    print('Current Longtitude: {:2.02f}'.format(cur_location[1]))
+    print('##########################################')
     closest_city_ID = getClosestCityIdByLocation(cur_location[0], cur_location[1])
     data = getWeatherDataByID(closest_city_ID)
+    print('##########################################')
+    print('Closest City in Database: {:s}'.format(data['title']))
+    print('##########################################')
     weather_data = data['consolidated_weather']
     weather_data_today = weather_data[0]
     weather_data_tomorrow = weather_data[1]
     print('##########################################')
-    print('## Today Weather Data in {:s} ##'.format(data['title']))
+    print('## Todays Weather Data in {:s} ##'.format(data['title']))
     displayData(weather_data_today)
     print('##########################################')
     print('##########################################')
-    print('## Tomorrow Weather Data in {:s} ##'.format(data['title']))
+    print('## Tomorrows Weather Data in {:s} ##'.format(data['title']))
     displayData(weather_data_tomorrow)
     print('##########################################')
 
