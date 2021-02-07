@@ -53,10 +53,14 @@ def main():
     weather_data = data['consolidated_weather']
     weather_data_today = weather_data[0]
     weather_data_tomorrow = weather_data[1]
+    print('##########################################')
     print('## Today Weather Data in {:s} ##'.format(data['title']))
     displayData(weather_data_today)
-    print('\n## Tomorrow Weather Data in {:s} ##'.format(data['title']))
+    print('##########################################')
+    print('##########################################')
+    print('## Tomorrow Weather Data in {:s} ##'.format(data['title']))
     displayData(weather_data_tomorrow)
+    print('##########################################')
 
 # Main Functoin
 if __name__ == '__main__':
